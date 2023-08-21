@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   filestream.hpp                                     :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/16 09:29:57 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/08/16 19:00:49 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/08/16 19:03:35 by jsoulet           #+#    #+#             */
+/*   Updated: 2023/08/17 11:07:28 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILESTREAM_HPP
-# define FILESTREAM_HPP
+#include "Harl.hpp"
 
-#include <iostream>
-#include <fstream>
-#include <cstring>
-#include <string>
+int main(int argc, char **argv)
+{
+	Harl harl;
 
-#endif
+	if (argc != 2)
+	{
+		std::cout << " number of argument is wrong " << std::endl;
+		return 1;
+	}
+	harl.complain(argv[1]);
+	return 0;
+}

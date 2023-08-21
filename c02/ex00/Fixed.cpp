@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   filestream.hpp                                     :+:      :+:    :+:   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/16 09:29:57 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/08/16 19:00:49 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/08/17 19:16:43 by jsoulet           #+#    #+#             */
+/*   Updated: 2023/08/17 19:18:09 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILESTREAM_HPP
-# define FILESTREAM_HPP
+#include "Fixed.hpp"
 
-#include <iostream>
-#include <fstream>
-#include <cstring>
-#include <string>
-
-#endif
+Fixed::Fixed(void) : value(0)
+{
+}

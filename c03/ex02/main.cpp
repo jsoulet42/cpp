@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 18:59:29 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/08/21 15:55:42 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/09/05 16:16:35 by jsoulet           #+#    #+#             */
+/*   Updated: 2023/09/07 13:09:54 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-#include <iostream>
-
-class Fixed
+int main(void)
 {
-	public:
-			Fixed(void);
-			Fixed(Fixed const &fixed);
-			Fixed &operator=(Fixed const &Sym);
-			~Fixed(void);
-			int getRawBits(void) const;
-			void setRawBits(int const raw);
+    DiamondTrap    c1("FragTrap1");
+    DiamondTrap    c2(c1);
+    DiamondTrap    c3(void);
 
-	private:
-			int value;
-			int static const heightBit = 8;
-
-};
-
-#endif
+    c1.attack("ennemy");
+    c1.takeDamage(30);
+    c1.beRepaired(10);
+    c1.highFivesGuys();
+    return(0);
+}

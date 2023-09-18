@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 18:59:29 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/08/21 15:55:42 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/09/06 16:30:35 by jsoulet           #+#    #+#             */
+/*   Updated: 2023/09/07 13:17:28 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#pragma once
 
 #include <iostream>
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-class Fixed
+class FragTrap : virtual public ClapTrap
 {
-	public:
-			Fixed(void);
-			Fixed(Fixed const &fixed);
-			Fixed &operator=(Fixed const &Sym);
-			~Fixed(void);
-			int getRawBits(void) const;
-			void setRawBits(int const raw);
-
-	private:
-			int value;
-			int static const heightBit = 8;
-
+    public :
+            FragTrap(std::string name);
+            ~FragTrap(void);
+            FragTrap(FragTrap const &src);
+            FragTrap& operator=(FragTrap const &rhs);
+            void highFivesGuys(void);
 };
-
-#endif

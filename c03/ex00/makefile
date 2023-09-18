@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/17 17:11:10 by jsoulet           #+#    #+#              #
-#    Updated: 2023/08/21 15:34:06 by jsoulet          ###   ########.fr        #
+#    Created: 2023/08/31 11:51:30 by jsoulet           #+#    #+#              #
+#    Updated: 2023/08/31 11:59:14 by jsoulet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= a.out
-SRC= main.cpp Fixed.cpp
+SRC= main.cpp 
 OBJ= $(SRC:.cpp=.o)
 
 all: $(NAME)

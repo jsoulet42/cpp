@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+         #
+#    By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/17 17:11:10 by jsoulet           #+#    #+#              #
-#    Updated: 2023/08/21 15:34:06 by jsoulet          ###   ########.fr        #
+#    Created: 2023/09/08 10:45:17 by jsoulet           #+#    #+#              #
+#    Updated: 2023/09/13 11:17:38 by jsoulet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= a.out
-SRC= main.cpp Fixed.cpp
+SRC= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ= $(SRC:.cpp=.o)
 
 all: $(NAME)

@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 18:59:29 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/08/21 15:55:42 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/09/05 15:01:30 by jsoulet           #+#    #+#             */
+/*   Updated: 2023/09/07 12:32:02 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#pragma once
 
 #include <iostream>
+#include "ClapTrap.hpp"
 
-class Fixed
+class ScavTrap : virtual public ClapTrap
 {
-	public:
-			Fixed(void);
-			Fixed(Fixed const &fixed);
-			Fixed &operator=(Fixed const &Sym);
-			~Fixed(void);
-			int getRawBits(void) const;
-			void setRawBits(int const raw);
-
-	private:
-			int value;
-			int static const heightBit = 8;
-
+    public :
+            ScavTrap(std::string name);
+            ~ScavTrap(void);
+            ScavTrap(ScavTrap const &src);
+            ScavTrap& operator=(ScavTrap const &rhs);
+            void guardGate();
 };
-
-#endif

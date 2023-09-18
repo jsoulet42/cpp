@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 18:59:29 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/08/21 15:55:42 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/09/07 12:18:32 by jsoulet           #+#    #+#             */
+/*   Updated: 2023/09/07 13:21:02 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
-
 #include <iostream>
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-class Fixed
+class DiamondTrap : public ScavTrap, public FragTrap
 {
-	public:
-			Fixed(void);
-			Fixed(Fixed const &fixed);
-			Fixed &operator=(Fixed const &Sym);
-			~Fixed(void);
-			int getRawBits(void) const;
-			void setRawBits(int const raw);
-
-	private:
-			int value;
-			int static const heightBit = 8;
-
+    public :
+            ~DiamondTrap(void);
+            DiamondTrap(DiamondTrap const &src);
+            DiamondTrap& operator=(DiamondTrap const &rhs);
+            DiamondTrap(std::string name);
+            void whoAmI();
+    private : 
+            std::string _name;
 };
-
-#endif

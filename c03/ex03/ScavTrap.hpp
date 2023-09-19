@@ -3,24 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 15:01:30 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/07 12:32:02 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/08/16 00:52:05 by lolefevr          #+#    #+#             */
+/*   Updated: 2023/09/19 17:09:55 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
 #include "ClapTrap.hpp"
 
 class ScavTrap : virtual public ClapTrap
 {
-    public :
-            ScavTrap(std::string name);
-            ~ScavTrap(void);
-            ScavTrap(ScavTrap const &src);
-            ScavTrap& operator=(ScavTrap const &rhs);
-            void guardGate();
+	private:
+
+
+	public:
+
+	ScavTrap();
+	ScavTrap(std::string name);
+	~ScavTrap();
+	ScavTrap& operator=(ScavTrap const &rhs);
+	ScavTrap(ScavTrap const &src);
+
+	void	attack(const std::string& target);
+	void	guardGate();
 };

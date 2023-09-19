@@ -3,40 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 13:34:12 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/06 16:21:25 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/08/15 23:22:18 by lolefevr          #+#    #+#             */
+/*   Updated: 2023/09/19 16:57:16 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void)
+ClapTrap::ClapTrap()
 {
+	std::cout << "ClapTrap Default Constructor called" << std::endl;
+	return ;
 }
 
-ClapTrap::ClapTrap(std::string const _name): _name(_name), _hitPoints(10), _attackDammage(0), _energyPoints(10)
+ClapTrap::ClapTrap(std::string const name) : _name(name)
 {
-	std::cout << "ClapTrap constructor called" << std::endl;
-}
-
-ClapTrap::~ClapTrap()
-{
-	std::cout << "ClapTrap destructor called" << std::endl;
-}
-
-ClapTrap& ClapTrap::operator=(ClapTrap const &rhs)
-{
-	std::cout << "ClapTrap assignation operator called" << std::endl;
-	if (this != &rhs)
-	{
-		this->_name = rhs._name;
-		this->_hitPoints = rhs._hitPoints;
-		this->_energyPoints = rhs._energyPoints;
-		this->_attackDammage = rhs._attackDammage;
-	}
-	return (*this);
+	std::cout << "ClapTrap Constructor called" << std::endl;
+	//this->_name = name;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &src)
@@ -45,17 +30,49 @@ ClapTrap::ClapTrap(ClapTrap const &src)
 	*this = src;
 }
 
-void	ClapTrap::attack(std::string const & target)
+ClapTrap::~ClapTrap()
 {
-	std::cout << this->_name << " attack " << target << ", causing " << this->_attackDammage << " points of damage!" << std::endl;
+	std::cout << "ClapTrap Destructor called" << std::endl;
+	return ;
+}
+
+ClapTrap& ClapTrap::operator=(ClapTrap const &rhs)
+{
+	std::cout << "ClapTrap assignation operator called" << std::endl;
+	if (this != &rhs)
+	{
+		this->_name = rhs._name;
+		this->_hitpoints = rhs._hitpoints;
+		this->_nrgpoints = rhs._nrgpoints;
+		this->_atkdmg = rhs._atkdmg;
+	}
+	return (*this);
+}
+
+void	ClapTrap::attack(const std::string& target)
+{
+	if (this->_hitpoints && this->_nrgpoints)
+	{
+		std::cout << "ClapTrap " << this->_name << " attacks " << target << " causing "
+		<< _atkdmg << " points of damage! " << std::endl;
+		this->_nrgpoints--;
+	}
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	std::cout << this->_name << " take " << amount << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " takes " << amount << " damage from the ennemie"
+	<< std::endl;
+	this->_hitpoints -= amount;
+
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << this->_name << " be repaired " << amount << " points of damage!" << std::endl;
+	if (this->_hitpoints && this->_nrgpoints)
+	{
+		std::cout << "ClapTrap " << this->_name << " heal " << amount
+		<< " lifepoint " << std::endl;
+		this->_nrgpoints--;
+	}
 }

@@ -3,26 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 12:18:32 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/07 13:21:02 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/08/16 15:39:37 by lolefevr          #+#    #+#             */
+/*   Updated: 2023/09/19 17:03:03 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#pragma once
+
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
 class DiamondTrap : public ScavTrap, public FragTrap
 {
-    public :
-            ~DiamondTrap(void);
-            DiamondTrap(DiamondTrap const &src);
-            DiamondTrap& operator=(DiamondTrap const &rhs);
-            DiamondTrap(std::string name);
-            void whoAmI();
-    private : 
-            std::string _name;
+	private:
+
+	std::string	_name;
+
+	public:
+
+	DiamondTrap();
+	DiamondTrap(std::string name);
+	~DiamondTrap();
+	DiamondTrap(DiamondTrap const &src);
+	DiamondTrap& operator=(DiamondTrap const &rhs);
+
+	void	whoAmI(void);
+
 };

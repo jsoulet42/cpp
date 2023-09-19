@@ -3,57 +3,67 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 15:22:29 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/07 13:01:15 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/08/16 00:51:20 by lolefevr          #+#    #+#             */
+/*   Updated: 2023/09/19 17:09:34 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name): ClapTrap(name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-    std::cout << "ScavTrap Constructor called" << std::endl;
-	_hitPoints = 100;
-	_energyPoints = 50;
-	_attackDammage = 20;
-}
-ScavTrap::~ScavTrap(void)
-{
-    std::cout << "ScavTrap destructor called" << std::endl;
+	std::cout << "ScavTrap" << this->_name << " Constructor called" << std::endl;
+	_atkdmg = 20;
+	_hitpoints = 100;
+	_nrgpoints= 50;
 }
 
-ScavTrap::ScavTrap(ScavTrap const &src): ClapTrap::ClapTrap(src)
+ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap copy constructor called" << std::endl;
+	std::cout << "SCAVTRAP destructor called" << std::endl;
 }
+
+ScavTrap::ScavTrap() : ClapTrap()
+{
+	std::cout << "Default SCAVTRAP constructor called" << std::endl;
+	_atkdmg = 20;
+	_hitpoints = 100;
+	_nrgpoints= 50;
+}
+
 ScavTrap& ScavTrap::operator=(ScavTrap const &rhs)
 {
     std::cout << "ScavTrap Assignation operator called" << std::endl;
     if (this != &rhs)
     {
         this->_name = rhs._name;
-        this->_attackDammage = rhs._attackDammage;
-        this->_energyPoints = rhs._energyPoints;
-        this->_hitPoints = rhs._hitPoints;
+        this->_atkdmg = rhs._atkdmg;
+        this->_nrgpoints = rhs._nrgpoints;
+        this->_hitpoints = rhs._hitpoints;
     }
     return *this;
 }
 
-void ScavTrap::guardGate()
+ScavTrap::ScavTrap(ScavTrap const &src): ClapTrap(src)
 {
-    std::cout << "ScavTrap has entered Gate Keeper mode" << std::endl;
+    std::cout << "ScavTrap copy constructor called" << std::endl;
+	*this = src;
 }
 
+void	ScavTrap::attack(const std::string &target)
+{
+	if (this->_hitpoints && this->_nrgpoints)
+	{
+		std::cout << "ScavTrap " << this->_name << " attacks " << target << " causing "
+		<< _atkdmg << " points of damage! " << std::endl;
+		this->_nrgpoints--;
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
+void ScavTrap::guardGate()
+{
+    std::cout  << this->_name << " ScavTrap has entered in Gate keeper mode." << std::endl;
+}

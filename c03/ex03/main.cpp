@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lolefevr <lolefevr@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 16:16:35 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/07 13:21:39 by jsoulet          ###   ########.fr       */
+/*   Created: 2023/08/16 15:53:24 by lolefevr          #+#    #+#             */
+/*   Updated: 2023/08/16 15:54:22 by lolefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,13 @@
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
 
-int main(void)
+int main()
 {
-    DiamondTrap    c1("DiamondTrap1");
-    DiamondTrap    c2(c1);
-    DiamondTrap    c3(void);
+	DiamondTrap D("Diamond");
 
-    c1.attack("ennemy");
-    c1.takeDamage(30);
-    c1.beRepaired(10);
-    c1.guardGate();
-    c1.highFivesGuys();
-    c1.whoAmI();
-    
-    return(0);
+	D.attack("ennemy");
+	D.takeDamage(20);
+	D.beRepaired(10);
+	D.whoAmI();
+	return (0);
 }

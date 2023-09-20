@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clapTrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 13:34:12 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/05 13:35:00 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/09/20 07:26:09 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@ ClapTrap::ClapTrap(void)
 }
 
 ClapTrap::ClapTrap(std::string name): _hitPoints(10), _attackDammage(0), _energyPoints(10)
-{
-}
-
-ClapTrap::~ClapTrap(void)
 {
 }
 

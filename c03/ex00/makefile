@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jsoulet <jsoulet@student.42.fr>            +#+  +:+       +#+         #
+#    By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/31 11:51:30 by jsoulet           #+#    #+#              #
-#    Updated: 2023/08/31 11:59:14 by jsoulet          ###   ########.fr        #
+#    Updated: 2023/09/20 07:24:08 by jsoulet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= a.out
-SRC= main.cpp 
+SRC= main.cpp ClapTrap.cpp
 OBJ= $(SRC:.cpp=.o)
 
 all: $(NAME)

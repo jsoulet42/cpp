@@ -6,7 +6,7 @@
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:46:23 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/13 11:09:47 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/09/20 10:27:05 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ std::string Animal::getType() const
 
 void Animal::MakeSound() const
 {
+	std::cout << "ye suis oune animal" << std::endl;
 
 }

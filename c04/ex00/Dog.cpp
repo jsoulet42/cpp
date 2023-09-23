@@ -6,7 +6,7 @@
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 16:50:44 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/13 11:31:17 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/09/23 18:41:38 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Dog& Dog::operator=(Dog const &rhs)
     return *this;
 }
 
-Dog::Dog(const Dog &src)
+Dog::Dog(const Dog &src): Animal()
 {
     std::cout << "Dog constructor copy called" << std::endl;
     *this = src;

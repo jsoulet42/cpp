@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */0
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 16:50:41 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/18 10:51:38 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/09/23 18:52:17 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 class Cat: public Animal
 {
 		public:
-            Cat();
-            ~Cat(void);
-            Cat(Cat const &src);
-            Cat& operator=(Cat const &rhs);
-            void MakeSound() const;
+			Cat();
+			~Cat(void);
+			Cat(Cat const &src);
+			Cat& operator=(Cat const &rhs);
+			void MakeSound() const;
 
-	private:
+		private:
 			Brain *_Brain;
 
 };

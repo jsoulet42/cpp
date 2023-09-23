@@ -6,7 +6,7 @@
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:41:07 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/13 10:49:26 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/09/23 18:44:27 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ WrongAnimal& WrongAnimal::operator=(WrongAnimal const &rhs)
 	return *this;
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal const &src)
+WrongAnimal::WrongAnimal(WrongAnimal const &src): _type("WrongAnimal")
 {
 	std::cout << "WrongAnimal copy constructor called" << std::endl;
 	*this = src;

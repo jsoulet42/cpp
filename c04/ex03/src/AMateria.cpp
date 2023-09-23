@@ -6,7 +6,7 @@
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:50:30 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/22 22:45:00 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/09/23 17:40:32 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,5 @@ std::string const &AMateria::getType() const
 
 void AMateria::use(ICharacter &target)
 {
+	(void)target;
 }

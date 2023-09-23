@@ -6,7 +6,7 @@
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 09:42:19 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/23 00:56:08 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/09/23 18:30:42 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ void Character::equip(AMateria* m)
 	if (this->inventoryFully == 4)
 	{
 		std::cout << "inventory is full plz unequip AMateria for equip " << m->getType() << std::endl;
-		delete m;
 		return ;
 	}
 	for (int Case = 0; Case < 4; Case++)

@@ -6,7 +6,7 @@
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 13:53:34 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/23 00:46:29 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/09/23 18:31:07 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ void MateriaSource::learnMateria(AMateria* m)
 	if (this->_memFully >= 4)
 	{
 		std::cout << "MateriaSource memory is full, cant add a new AMateria" << std::endl;
-		delete m;
 		return;
 	}
 	this->_mem[_memFully] = m;

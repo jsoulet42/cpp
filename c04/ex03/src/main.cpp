@@ -6,7 +6,7 @@
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 09:34:24 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/23 01:03:45 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/09/23 18:32:40 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,10 @@ int main()
 	src->learnMateria(new Cure());
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
-	src->learnMateria(new Ice());
 	AMateria* tmp;
 	AMateria* tmp2;
 	AMateria* tmp3;
 	AMateria* tmp4;
-	AMateria* tmp5;
 	std::cout << "---------------------" << std::endl;
 	ICharacter* me = new Character("me");
 	std::cout << "---------------------" << std::endl << std::endl;
@@ -39,8 +37,6 @@ int main()
 	me->equip(tmp3);
 	tmp4 = src->createMateria("cure");
 	me->equip(tmp4);
-	tmp5 = src->createMateria("ice");
-	me->equip(tmp5);
 	std::cout << "---------------------" << std::endl;
 	ICharacter* bob = new Character("bob");
 	std::cout << "---------------------" << std::endl << std::endl;

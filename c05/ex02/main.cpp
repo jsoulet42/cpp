@@ -6,7 +6,7 @@
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 15:12:30 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/10/10 22:30:19 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/10/10 22:46:53 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,8 @@ int main ()
 	{
 		std::cerr << e.what() << std::endl;
 	}
-
+	delete shru;
+	delete robot;
+	delete president;
+	delete bubu;
 }

@@ -6,7 +6,7 @@
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 22:46:10 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/10/10 18:51:45 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/10/10 22:46:09 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class AForm
 				AForm();
 				AForm(AForm const &src);
 				AForm(std::string name, int forSigned, int forExecute);
-				~AForm();
+				virtual ~AForm();
 
 				std::string const getName() const;
 				bool getSigned() const;

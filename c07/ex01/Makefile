@@ -1,4 +1,4 @@
-NAME= Base
+NAME= Iter
 SRC= $(wildcard *.cpp)
 OBJ= $(SRC:.cpp=.o)
 

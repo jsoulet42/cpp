@@ -1,5 +1,5 @@
 
-#include "Whatever.hpp"
+#include "Template.hpp"
 #include <iostream>
 
 int main( void ) {

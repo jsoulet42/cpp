@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/16 23:44:55 by jsoulet           #+#    #+#             */
+/*   Updated: 2023/10/19 10:30:22 by jsoulet          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #pragma once
 
@@ -61,7 +72,7 @@ template <class T>
 Array<T>::Array(unsigned int n)
 {
 	this->_array = new T[n];
-	for (unsigned int i; i < n; i++)
+	for (unsigned int i = 0; i < n; i++)
 		this->_array[i] = 0;
 	this->_size = n;
 }

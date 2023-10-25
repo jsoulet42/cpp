@@ -6,7 +6,7 @@
 /*   By: jsoulet <jsoulet@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 16:50:36 by jsoulet           #+#    #+#             */
-/*   Updated: 2023/09/23 18:52:31 by jsoulet          ###   ########.fr       */
+/*   Updated: 2023/10/24 13:22:24 by jsoulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,15 @@ Cat &Cat::operator=(Cat const &rhs)
     if (this != &rhs)
     {
         this->_type = rhs.getType();
+
     }
     return *this;
 }
 
 Cat::Cat(Cat const &src): Animal()
 {
-    std::cout << "Cat copy operator called" << std::endl;
-    *this = src;
+	std::cout << "Cat copy operator called" << std::endl;
+	*this = src;
 }
 
 void Cat::MakeSound() const
